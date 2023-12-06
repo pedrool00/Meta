@@ -1,0 +1,62 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px; /* Adjust the size as needed */
+}
+
+nav {
+    grid-area: nav;
+    background-color: #ddd;
+    padding: 1rem;
+}
+
+main {
+    grid-area: main;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Two rows */
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+}
+
+.main-section {
+    border: 1px solid #ccc; /* Optional: Adding a border for visualization */
+    padding: 1rem;
+}
+
+.full-width-section {
+    grid-row: 1 / span 2; /* Make the element span two rows */
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the footer */
+}
+
+.half-width-section {
+    border: 1px solid #ccc; /* Optional: Adding a border for visualization */
+    padding: 1rem;
+}
